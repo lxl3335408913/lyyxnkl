@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0a0a2e;
+    font-family: 'Microsoft YaHei', sans-serif;
+    overflow: hidden;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding-top: 20vh;
+    color: #fff;
+}
+
+.title {
+    font-size: 4em;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 15px rgba(255,255,255,0.5);
+    animation: glow 2s ease-in-out infinite;
+}
+
+.year {
+    display: block;
+    font-size: 1.5em;
+    color: #ffd700;
+    margin-top: 0.5em;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #ff3366, #ff6b6b);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255,51,102,0.3);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255,51,102,0.5);
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+#blessing-text {
+    margin-top: 2em;
+    font-size: 1.5em;
+    min-height: 60px;
+    animation: fadeIn 1s;
+}
+
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 15px rgba(255,255,255,0.5); }
+    50% { text-shadow: 0 0 30px rgba(255,255,255,0.8); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
